@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5123:5123"
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:7854
+    volumes:
+      - .:/code
+    ports:
+      - "7854:7854"
+    depends_on:
+      - db
+
+
+networks:
+  default:
+    external:
+      name: backend_default
