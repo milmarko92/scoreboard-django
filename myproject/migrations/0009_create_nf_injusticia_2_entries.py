@@ -3,7 +3,7 @@
 from django.db import migrations
 from django.db.migrations import RunPython
 
-from myproject.inputs.injusticia_2_sf1 import injusticia_2_entries
+from myproject.inputs.injusticia_2_sf1 import injusticia_2_entries_2, injusticia_2_entries_1
 
 
 def create_entries_1(apps, schema_editor):

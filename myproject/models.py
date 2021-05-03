@@ -11,7 +11,6 @@ class Edition(models.Model):
         return f"{self.year} {self.name}"
 
 
-
 class Entry(models.Model):
     artist = models.CharField(max_length=256, null=True, blank=True)
     title = models.CharField(max_length=256, null=True, blank=True)
